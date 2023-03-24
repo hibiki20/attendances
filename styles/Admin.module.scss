@@ -1,0 +1,89 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "header"
+      "attendances"
+      "salaryInfo";
+    gap: 20px;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  
+    .header {
+      grid-area: header;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  
+    .attendances {
+      grid-area: attendances;
+  
+      .filter {
+        display: flex;
+        align-items: center;
+  
+        label {
+          margin-right: 10px;
+        }
+  
+        select {
+          padding: 5px;
+        }
+      }
+  
+      .attendance {
+        margin-top: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+  
+        .personName {
+          font-size: 20px;
+          font-weight: bold;
+        }
+  
+        .attendanceList {
+          margin-top: 10px;
+          padding: 0;
+          list-style: none;
+  
+          li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px 0;
+  
+            .start {
+              color: green;
+            }
+  
+            .end {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  
+    .salaryInfo {
+      grid-area: salaryInfo;
+  
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+  
+        span:first-child {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  
